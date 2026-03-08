@@ -1,0 +1,77 @@
+	.info-labels{
+		display:inline-block;
+		width:90px;
+		margin-left:10px;
+	}
+	.info-label-head{
+		font-size:16px;
+		color:#F66438;
+		margin:10px 0 5px 10px;
+	}
+	.info-label-head2{
+		font-size:14px;
+		color:#777;
+		margin:10px;
+		padding-top:5px;
+		display:block;
+		border-top:solid 2px WhiteSmoke;
+	}
+	.frm-emails, .frm-description{
+		max-width:calc(100% - 110px);
+		vertical-align:top;
+	}
+	.infoBoxContent p{
+		font-size:14px;
+		margin:5px;
+		padding:5px;
+		background-color:white;
+		color:##05316F;
+		border:solid 1px #F66438;
+		border-radius:5px;
+	}
+	.table-listing-display{
+		width:100%;
+	}
+	.table-listing-display th{
+		padding:2px 5px;
+		background-color:Gainsboro;
+	}
+	.table-listing-display td{
+		padding:2px 5px;
+		border:solid 1px Gainsboro;
+	}
+	.listBox{
+		border:solid 1px Silver;
+		background-color:white;
+		margin:2px 5px;
+		padding:5px;
+	}
+	.listBox a{
+		float:right;
+	}
+	#tblReport{
+		width:100%;
+	}
+	#tblReport th, #tblReport td{
+		padding:2px 5px;
+		margin:10px 0;
+	}
+	#tblReport th{
+		text-align:left;
+	}
+	#tblReport tr{
+		background-color:Gainsboro;
+	}
+	#tblReport .evenRow{
+		background-color:White;
+	}
+	#tblReport .oddRow{
+		background-color:WhiteSmoke;
+	}
+	#widgetBox, #linkBox{
+		border:solid 1px White;
+		border-radius:5px;
+		background-color:WhiteSmoke;
+		padding:5px;
+		margin:5px;
+	}

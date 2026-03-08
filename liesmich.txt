@@ -1,0 +1,86 @@
+Widerrufsformular 1.0.0 für Zen Cart 1.5.7j deutsch
+
+=================
+BESCHREIBUNG
+=================
+Die Pflicht zur Vorhaltung einer elektronischen Widerrufsfunktion („Widerrufsbutton“) tritt zum 19.06.2026 in Kraft und gilt für alle Shops mit Online-Bestell- oder Buchungsfunktion, in denen (auch) vom Verbraucherwiderrufsrecht umfasste Waren, Dienstleistungen und/oder digitale Inhalte angeboten werden
+Dieses Modul stellt ein frei konfigurierbares Widerrufsformular bereit, das die gesetzlichen Vorschriften ab 19.06.2026 erfüllt.
+Bei der Installation werden keine bestehenden Dateien überschrieben, so dass die Installation sehr einfach ist und keine Probleme bei zukünftigen Zen Cart Updates verursachen sollte.
+
+Das Modul verfügt über drei administrative Schnittstellen: 
+* Konfiguration > Widerrufsformular für allgemeine Einstellungen
+* Webshop > Widerrufsformular erstellen/bearbeiten um das Widerrufsformular anzupassen oder für andere Sprachen zu generieren
+* Kunden > Widerrufsformular Dashboard um die gesandten Widerrufe der Kunden zu sehen und auf in Arbeit oder Erledigt zu stellen
+
+Formulare für deutsch und englisch werden bereits bei der Installation vorgeneriert, so dass alles sofort ohne weitere Anpassung einsatzbereit ist.
+* Der Kunde erhält nach Absenden des Formulars die vorgeschriebene Bestätigung des Erhalts per Email.
+* An die in den Einstellungen hinterlegte E-Mail wird auch der Admin über den Widerruf benachrichtigt.
+* In der Zen Cart Administration sind die gesandten Widerrufe ersichtlich und können auf erledigt gestellt werden.
+
+=================
+DEMO:
+=================
+
+Der Ablauf im Frontend kann hier durchgespielt werden:
+https://widerrufsformular.zencartdemo.at
+
+
+==================
+INSTALLATION
+==================
+
+Dieses Modul ist nur für die deutsche Zen Cart 1.5.7j Version geeignet
+
+Empfehlung:
+
+Dieses Modul erst in einem Testsystem einbauen und dort konfigurieren/testen und endgültig an die eigenen Wünsche anpassen. Erst dann in einem Liveshop einsetzen! Sichern Sie unbedingt alle Dateien Ihres Shops per FTP und sichern Sie die Datenbank mit phpMyAdmin oder anderen geeigneten Tools!
+
+WICHTIG
+Vor dem Einbau dieser Änderungen:
+BACKUP von Shop und Datenbank machen!
+Keine Haftung, Verwendung auf eigene Gefahr!
+BACKUP gemacht? Ok, dann weiterlesen...
+
+Die Installation erfolgt in folgenden Schritten. Halten Sie diesen Ablauf ein!
+
+1. Benennen Sie im Ordner NEUE DATEIEN den Ordner DEINADMIN auf den Namen Ihres Adminverzeichnisses um.
+2. Benennen Sie im Ordner NEUE DATEIEN alle Ordner namens DEINTEMPLATE auf den Namen Ihres im Shop aktiven Templates um (z.B. responsive_classic)
+3. Loggen Sie sich in Ihre Zen Cart Shopadministration ein.
+4. Laden Sie nun die Ordner/Dateien aus dem Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Zen Cart Verzeichnis hoch. Dabei werden keinerlei bestehende Dateien überschrieben.
+5. Clicken Sie nun in Ihrer Zen Cart Administration auf irgendeinen Menüpunkt, Sie sollten oben grüne Erfolgsmeldungen sehen.
+
+
+==================
+KONFIGURATION
+==================
+Unter Konfiguration > Widerrufsformular finden Sie generelle Einstellungen. Tragen Sie die E-Mail-Adresse, an die die Widerrufe gesendet werden sollen unter der Option E-Mail Adresse ein.
+Falls Sie das Admin Mail an mehrere E-mail Adressen schicken lassen wollen, geben Sie mehrere Adressen mit Komma getrennt ein
+Die sonstigen Voreinstellungen dort können Sie unverändert lassen, außer Sie haben spezielle Anforderungen.
+
+Unter Webshop > Widerrufsformular hinzufügen/bearbeiten sind bereits zwei vollständig den rechtlichen Erfordernissen entsprechende Widerrufsformulare für deutsch und englisch hinterlegt. 
+Beschreibung meint immer einen Hilfetext, der im Formular dann durch Mouseover über das jeweilige Fragezeichen eingeblendet wird.
+Diese Texte können Sie nach Ihren Wünschen anpassen
+
+Der Link zu Ihrem Formular wird Ihnen angezeigt, diesen Link verlinken Sie dann wo auch immer Sie zu diesem Widerrufsformular linken wollen.
+Wenn Sie im Shop eine Fußzeile mit EZ-Pages Links verwenden, dann legen Sie z.B. eine EZ-Page mit dem Titel Vertrag widerrufen an und verwenden als internen Link:
+index.php?main_page=widerrufsformular&form_id=1
+Stellen Sie bei der EZ-Page die Anzeige in der Fußzeile auf ein, alle anderen Orte auf false
+Danach wird in Ihrer Fußzeile der entsprechende Link mit dem Titel Vertrag widerrufen angezeigt.
+
+Wenn Sie keine EZ-Pages Links verwenden, dann integrieren Sie den Link z.B. in Ihrer Sidebox Information, eine Vorlage finden Sie im Ordner VORLAGE FUER SIDEBOX
+Nur wenn Sie in Ihrem Shop neben deutsch und englisch noch weitere Sprachen verwenden, müssen Sie unter Webshop > Widerrufsformular hinzufügen/bearbeiten ein neues Widerrufsformular für die entsprechende Sprache erstellen.
+
+Unter Kunden > Widerrufsformular Dashboard finden Sie später die erfolgreich über das Widerrufsformular abgesandten Nachrichten.
+Hier kann der Bearbeiter den enthaltenen Widerruf dann nach der Prüfung und Bearbeitung auch auf erledigt stellen.
+
+Um das Widerrufsformular weiter zu stylen die includes/templates/DEINTEMPLATE/css/widerrufsformular.css entsprechend bearbeiten.
+
+
+==================
+DEINSTALLATION
+==================
+
+Um das Modul komplett zu entfernen:
+1. Alle von diesem Modul neu hinzugefügten Dateien vom Server löschen
+2. Im Ordner UNINSTALL die uninstall.sql mit einem Texteditor öffnen und den Inhalt kopieren
+3. Kopierten Inhalt absenden unter Tools > SQL Patches installieren
