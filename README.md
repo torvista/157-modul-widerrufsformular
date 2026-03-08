@@ -17,6 +17,7 @@ Das Modul verfügt über drei administrative Schnittstellen:
 * Konfiguration > Widerrufsformular für allgemeine Einstellungen
 * Webshop > Widerrufsformular erstellen/bearbeiten um das Widerrufsformular anzupassen oder für andere Sprachen zu generieren
 * Kunden > Widerrufsformular Dashboard um die gesandten Widerrufe der Kunden zu sehen und auf in Arbeit oder Erledigt zu stellen
+  
 Formulare für deutsch und englisch werden bereits bei der Installation vorgeneriert, so dass alles sofort ohne weitere Anpassung einsatzbereit ist.
 * Der Kunde erhält nach Absenden des Formulars die vorgeschriebene Bestätigung des Erhalts per Email.
 * An die in den Einstellungen hinterlegte E-Mail wird auch der Admin über den Widerruf benachrichtigt.
