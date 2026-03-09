@@ -129,10 +129,10 @@ ABSICHERUNG MIT GOOGLE RECAPTCHA V3
 Um das Widerrufsformular gegen Spam abzusichern, können Sie das Modul Google ReCaptcha V3 verwenden, das ohnehin zur Absicherung des Kontaktformulars zu empfehlen ist:
 https://www.zen-cart-pro.at/knowledgebase/google-recaptcha-v3-fuer-zen-cart-1-5-7-deutsch/
 
-Falls Sie dieses Modul in Ihrem Zen Cart Shop aktiv haben, passen Sie die beiden Beispieldateien im Ordner OPTIONAL-GOOGLE-RECAPTCHA an die Ihrer Installation an.
+Falls Sie dieses Modul in Ihrem Zen Cart Shop aktiv haben, passen Sie die drei Beispieldateien im Ordner OPTIONAL-GOOGLE-RECAPTCHA an die Ihrer Installation an.
 Unter Konfiguration > Google ReCaptcha V3 Konfiguration tragen Sie dann unter Aktion je Formularseite zusätzlich die Widerrufsformularseite ein.
 So, dass es z.B. so aussieht:
-contact_us=default, product_reviews_write=default, widerrufsformular=default
+contact_us=default, ask_a_question=default, widerrufsformular=default
 
 
 ==================
