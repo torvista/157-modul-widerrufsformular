@@ -5,7 +5,7 @@
 * @copyright Copyright 2003-2026 Zen Cart Development Team
 * Zen Cart German Version - www.zen-cart-pro.at
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: widerrufsformular.php 2026-03-08 15:39:40Z webchills $
+* @version $Id: widerrufsformular.php 2026-03-09 15:39:40Z webchills $
 */
 
 define('TEXT_SUCCESS', 'Ihr Widerruf wurde erfolgreich versandt.');
@@ -30,7 +30,7 @@ define('HEAD_SUCCESS', 'Widerruf gesendet!<br>Eine Empfangsbestätigung erhalten
 define('DEFAULT_REQUEST_STATUS', 'erhalten');
 
 define('EMAIL_SUBJECT_ADMIN', 'Widerruf einer Bestellung bei ' . STORE_NAME . ' - Widerruf ID: %s');
-define('EMAIL_SUBJECT_CUSTOMER', 'Empfangsbestätigung Ihres Widerrufs bei ' . STORE_NAME);
+define('EMAIL_SUBJECT_CUSTOMER', 'Eingangsbestätigung Ihres Widerrufs bei ' . STORE_NAME);
 define('EMAIL_FOOTER_CUSTOMER', 'Wir werden Ihren Widerruf nun prüfen und weiterbearbeiten. Danach melden wir uns mit weiteren Informationen wieder.');
 
 define('JSON_LINE_BREAK_PLACEHOLDER', '|||');

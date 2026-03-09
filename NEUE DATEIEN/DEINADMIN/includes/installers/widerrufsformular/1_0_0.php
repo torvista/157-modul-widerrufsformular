@@ -5,7 +5,7 @@
 * @copyright Copyright 2003-2026 Zen Cart Development Team
 * Zen Cart German Version - www.zen-cart-pro.at
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: 1.0.0.php 2026-03-08 10:47:40Z webchills $
+* @version $Id: 1.0.0.php 2026-03-09 15:47:40Z webchills $
 */
  
 $db->Execute("CREATE TABLE IF NOT EXISTS " . TABLE_WIDERRUFSFORMULAR . " (
@@ -21,8 +21,8 @@ $db->Execute("CREATE TABLE IF NOT EXISTS " . TABLE_WIDERRUFSFORMULAR . " (
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;");
 
 $db->Execute(" INSERT INTO " . TABLE_WIDERRUFSFORMULAR . " (`form_id`, `form_title`, `page_title`, `page_heading`, `navbar_title`, `form_description`, `created_by`, `timestamp`) VALUES
-(1, 'Teilwiderruf oder Kommentar', 'Widerruf', 'Widerruf', 'Widerruf', '<p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.<br>\r\nDie Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen haben bzw. hat.<br>\r\nUm Ihr Widerrufsrecht auszuüben, können Sie dieses Formular ausfüllen und absenden. Sie erhalten danach sofort per Email eine Bestätigung über den Eingang Ihres Widerrufs.<br>\r\n<br>\r\nWenn Sie nur bestimmte Artikel aus der Bestellung widerrufen wollen (Teilwiderruf), dann tragen Sie unten die Namen der Artikel ein.<br>\r\nFür einen vollständigen Widerruf können Sie das Feld einfach leer lassen.</p>', 1, '2026-03-07 16:20:24'),
-(2, 'Partial cancellation or comment', 'Cancellation', 'Cancellation', 'Cancellation', '<p>You have the right to withdraw from this contract within fourteen days without giving any reason.<br>\r\nThe withdrawal period is fourteen days from the day on which you or a third party named by you, who is not the carrier, took possession of the last goods. <br>\r\nTo exercise your right of withdrawal, you can fill out and submit this form. You will then immediately receive confirmation of receipt of your withdrawal by email.<br>\r\n<br>\r\nIf you only want to withdraw certain items from the order (partial withdrawal), please enter the names of the items below. <br>\r\nFor a complete withdrawal, simply leave the field blank.</p>', 2, '2026-03-07 16:20:24')");
+(1, 'Teilwiderruf oder Kommentar', 'Widerruf', 'Widerruf', 'Widerruf', '<p>Um Ihr Widerrufsrecht auszuüben, können Sie dieses Formular ausfüllen und absenden. Sie erhalten danach sofort per Email eine Bestätigung über den Eingang Ihres Widerrufs.<br>\r\n<br>\r\nWenn Sie nur bestimmte Artikel aus der Bestellung widerrufen wollen (Teilwiderruf), dann tragen Sie unten die Namen der Artikel ein.<br>\r\nFür einen vollständigen Widerruf können Sie das Feld einfach leer lassen.</p>', 1, '2026-03-07 16:20:24'),
+(2, 'Partial cancellation or comment', 'Cancellation', 'Cancellation', 'Cancellation', '<p>To exercise your right of withdrawal, you can fill out and submit this form. You will then immediately receive confirmation of receipt of your withdrawal by email.<br>\r\n<br>\r\nIf you only want to withdraw certain items from the order (partial withdrawal), please enter the names of the items below. <br>\r\nFor a complete withdrawal, simply leave the field blank.</p>', 2, '2026-03-07 16:20:24')");
 
 
 $db->Execute("CREATE TABLE IF NOT EXISTS " . TABLE_WIDERRUFSFORMULAR_FIELDS . " (
