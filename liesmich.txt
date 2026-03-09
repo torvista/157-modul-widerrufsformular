@@ -1,4 +1,7 @@
 Widerrufsformular 1.0.0 für Zen Cart 1.5.7j deutsch
+2026-03-09
+© 2026 webchills (www.webchills.at)
+Lizenz: GPL3
 
 =================
 BESCHREIBUNG
@@ -59,21 +62,64 @@ Die sonstigen Voreinstellungen dort können Sie unverändert lassen, außer Sie 
 
 Unter Webshop > Widerrufsformular hinzufügen/bearbeiten sind bereits zwei vollständig den rechtlichen Erfordernissen entsprechende Widerrufsformulare für deutsch und englisch hinterlegt. 
 Beschreibung meint immer einen Hilfetext, der im Formular dann durch Mouseover über das jeweilige Fragezeichen eingeblendet wird.
-Diese Texte können Sie nach Ihren Wünschen anpassen
+Diese Texte können Sie nach Ihren Wünschen anpassen.
+
+
+==================
+LINK/BUTTON ZUM WIDERRUFSFORMULAR INS TEMPLATE INTEGRIEREN
+==================
 
 Der Link zu Ihrem Formular wird Ihnen angezeigt, diesen Link verlinken Sie dann wo auch immer Sie zu diesem Widerrufsformular linken wollen.
-Wenn Sie im Shop eine Fußzeile mit EZ-Pages Links verwenden, dann legen Sie z.B. eine EZ-Page mit dem Titel Vertrag widerrufen an und verwenden als internen Link:
+Er lautet standardmäßig für die deutsche Sprachversion:
 index.php?main_page=widerrufsformular&form_id=1
-Stellen Sie bei der EZ-Page die Anzeige in der Fußzeile auf ein, alle anderen Orte auf false
-Danach wird in Ihrer Fußzeile der entsprechende Link mit dem Titel Vertrag widerrufen angezeigt.
+Und für die englische:
+index.php?main_page=widerrufsformular&form_id=2
 
-Wenn Sie keine EZ-Pages Links verwenden, dann integrieren Sie den Link z.B. in Ihrer Sidebox Information, eine Vorlage finden Sie im Ordner VORLAGE FUER SIDEBOX
-Nur wenn Sie in Ihrem Shop neben deutsch und englisch noch weitere Sprachen verwenden, müssen Sie unter Webshop > Widerrufsformular hinzufügen/bearbeiten ein neues Widerrufsformular für die entsprechende Sprache erstellen.
+Der Link muss benannt sein als:
+Vertrag widerrufen
+
+Für die Darstellung gilt, dass er auffällig sein muss, daher muss er zumindest fett sein oder als Button dargestellt werden.
+Und er muss auf jeder Seite des Shops vorhanden sein.
+Empfohlen wird eine Darstellung in der Fußzeile oder wo Sie eben sonst solch wichtige Links in Ihrem Shop vorgesehen haben.
+
+Falls Sie mit EZ Pages Links in der Fußzeile arbeiten, finden Sie im Ordner LINK IN TEMPLATE INTEGRIEREN/IN DER EZ-PAGES FUSSZEILE eine Vorlage für eine entsprechend geänderte Datei.
+
+Falls Sie mit EZ Pages Sidebox arbeiten, finden Sie im Ordner LINK IN TEMPLATE INTEGRIEREN/IN DER EZ-PAGES SIDEBOX eine Vorlage für eine entsprechend geänderte Datei.
+
+Falls Sie mit der Sidebox Information arbeiten, finden Sie im Ordner LINK IN TEMPLATE INTEGRIEREN/IN DER SIDEBOX INFORMATION eine Vorlage für eine entsprechend geänderte Datei.
+
+Für alle anderen Einbindungsarten, fügen Sie in Ihrem Template an der Stelle, wo der Link/Button erscheinen soll Folgendes ein:
+
+<a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a>
+
+Für mehrsprachige Shops kann mit einer entsprechenden Abfrage gearbeitet werden:
+
+<?php if ($_SESSION['language']=='german') {?>
+  <a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a>>
+<?php  } else { ?>
+	<a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2">Cancel contract</a>
+<?php } ?> 
+
+Die Darstellung des Buttons können Sie dann in folgender Datei auf Ihre Farben oder sonstigen Wünsche anpassen:
+includes/templates/DEINTEMPLATE/css/stylesheet_widerrufsbutton.css
+
+
+==================
+WIDERRUFSBEARBEITUNG IN DER ADMINISTRATION
+==================
 
 Unter Kunden > Widerrufsformular Dashboard finden Sie später die erfolgreich über das Widerrufsformular abgesandten Nachrichten.
 Hier kann der Bearbeiter den enthaltenen Widerruf dann nach der Prüfung und Bearbeitung auch auf erledigt stellen.
 
+
+==================
+WEITERE ANPASSUNG
+==================
+
 Um das Widerrufsformular weiter zu stylen die includes/templates/DEINTEMPLATE/css/widerrufsformular.css entsprechend bearbeiten.
+Als Hilfe Icon wird folgende Datei mitgeliert:
+images/widerrufsformular-help.png
+Überschreiben Sie diese Datei mit Ihrer eigenen Grafik.
 
 
 ==================
