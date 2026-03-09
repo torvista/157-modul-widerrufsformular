@@ -5,11 +5,12 @@
 * @copyright Copyright 2003-2026 Zen Cart Development Team
 * Zen Cart German Version - www.zen-cart-pro.at
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: widerrufsformular.php 2026-03-08 12:24:40Z webchills $
+* @version $Id: widerrufsformular.php 2026-03-09 18:24:40Z webchills $
 */
 class widerrufsformular extends base{
 	private $form_id = 0;
 	private $order_id = 0;
+	private $ordernumber = 0;
 	private $form = '';
 	private $action = '';
 	private $required_fields = array();	
@@ -223,9 +224,6 @@ class widerrufsformular extends base{
 						:timestamp
 					)";
 			
-//			$email_text_admin = EMAIL_CONTACT_TITLE . "\n";
-//			$email_html_admin = '<h1>' . EMAIL_CONTACT_TITLE . '</h1>' . "\n";
-			
 			/* CONTACT SECTION */
 			
 	#STATUS
@@ -236,37 +234,20 @@ class widerrufsformular extends base{
 			#ORDERNUMBER
 			$sql = $db->BindVars( $sql, ':formID', zen_db_prepare_input($form_id), 'integer' );
 			$sql = $db->BindVars( $sql, ':orderID', zen_db_prepare_input($ordernumber), 'string' );
-//			if( $ordernumber != '' ){
+
         $timestamp = date('d.m.Y H:i:s');
         $email_text_customer .= LABEL_TIMESTAMP . "\n" . $timestamp . "\n\n";
-				$email_html_customer .= '<p>' . LABEL_TIMESTAMP . '<br />' . $timestamp . '</p>' . "\n";
-				$email_text_admin .= LABEL_TIMESTAMP . "\n" . $timestamp . "\n\n";
-				$email_html_admin .= '<p>' . LABEL_TIMESTAMP . '<br />' . $timestamp . '</p>' . "\n";
-//			}	
+				$email_html_customer .= '<p>' . LABEL_TIMESTAMP . '<br />' . $timestamp . '</p>' . "\n";			
+
 			
 			#NAME
 			$sql = $db->BindVars( $sql, ':formID', zen_db_prepare_input($form_id), 'integer' );
 			$sql = $db->BindVars( $sql, ':cName', zen_db_prepare_input($name), 'string' );
-//			if( $name != '' ){
-//				$email_text_admin .= LABEL_CUSTOMER_NAME . ': ' . $name . "\n";
-//				$email_html_admin .= '<p>' . LABEL_CUSTOMER_NAME . ':</p><p>' . $name . '</p><br /><br />' . "\n";
-//			}	
-			
+
 			#EMAIL
 			$sql = $db->BindVars( $sql, ':cEmail', zen_db_prepare_input($email), 'string' );
-//			if( $email != '' ){
-//				$email_text_admin .= LABEL_CUSTOMER_EMAIL . ': ' . $email . "\n";
-//			$email_html_admin .= '<p>' . LABEL_CUSTOMER_EMAIL . ':</p><p>' . $email . '</p><br /><br />' . "\n";
-//			}
-			
-					
-			
-			
-			
 			
 			/* MESSAGE SECTION */
-			//$email_text_customer .= "\n\n" . EMAIL_PRODUCT_DESCRIPTION_TITLE . "\n";			
-			
 			
 			#MESSAGE
 			$sql = $db->BindVars( $sql, ':message', zen_db_prepare_input($message), 'string' );
@@ -277,11 +258,7 @@ class widerrufsformular extends base{
 					$elArray = (array)$elObj;
 					$fLabel = key($elArray);
 					$fValue = $elArray[key($elArray)];
-					
-						
 				$fValue = $this->GetTextFromOptionValue( $fValue );
-						
-					
 					
 					#LOAD EMAIL
 					
@@ -380,7 +357,7 @@ class widerrufsformular extends base{
 					( in_array('txtOrderNumber', $this->required_fields) ? REQUIRED_FLAG : '' ) .
 				'</th>
 				<td class="tblFormFields">' . 
-					zen_draw_input_field('txtOrderNumber', $customer['order_id'], zen_set_field_length(TABLE_WIDERRUFSFORMULAR_REQUESTS, 'order_id', $maxlen)) .
+					zen_draw_input_field('txtOrderNumber', $customer['orderid'], zen_set_field_length(TABLE_WIDERRUFSFORMULAR_REQUESTS, 'order_id', $maxlen)) .
 				'</td>
 			</tr>';
 			$show_contact_info = true;
@@ -870,4 +847,3 @@ class widerrufsformular extends base{
 		return $this->required_fields;
 	}
 }
-?>
