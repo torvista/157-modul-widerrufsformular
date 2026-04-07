@@ -1,5 +1,5 @@
-Widerrufsformular 1.0.0 für Zen Cart 1.5.7j deutsch
-2026-03-09
+Widerrufsformular 1.0.1 für Zen Cart 1.5.7k deutsch
+2026-04-05
 © 2026 webchills (www.webchills.at)
 Lizenz: GPL3
 
@@ -32,7 +32,7 @@ https://widerrufsformular.zencartdemo.at
 INSTALLATION
 ==================
 
-Dieses Modul ist nur für die deutsche Zen Cart 1.5.7j Version geeignet
+Dieses Modul ist nur für die deutsche Zen Cart 1.5.7k Version geeignet
 
 Empfehlung:
 
