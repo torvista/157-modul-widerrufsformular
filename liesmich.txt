@@ -1,5 +1,5 @@
-Widerrufsformular 1.0.1 für Zen Cart 1.5.7k deutsch
-2026-04-05
+Widerrufsformular 1.0.2 für Zen Cart 1.5.7k deutsch
+2026-05-10
 © 2026 webchills (www.webchills.at)
 Lizenz: GPL3
 
@@ -59,6 +59,7 @@ KONFIGURATION
 Unter Konfiguration > Widerrufsformular finden Sie generelle Einstellungen. Tragen Sie die E-Mail-Adresse, an die die Widerrufe gesendet werden sollen unter der Option E-Mail Adresse ein.
 Falls Sie das Admin Mail an mehrere E-mail Adressen schicken lassen wollen, geben Sie mehrere Adressen mit Komma getrennt ein
 Die sonstigen Voreinstellungen dort können Sie unverändert lassen, außer Sie haben spezielle Anforderungen.
+Nachdem Sie den Link zum Widerrufsformualr in Ihr Template integriert haben (siehe unten), stellen Sie hier Link anzeigen auf true. Nur dann wird der Link angezeigt werden.
 
 Unter Webshop > Widerrufsformular hinzufügen/bearbeiten sind bereits zwei vollständig den rechtlichen Erfordernissen entsprechende Widerrufsformulare für deutsch und englisch hinterlegt. 
 Beschreibung meint immer einen Hilfetext, der im Formular dann durch Mouseover über das jeweilige Fragezeichen eingeblendet wird.
@@ -94,10 +95,12 @@ Für alle anderen Einbindungsarten, fügen Sie in Ihrem Template an der Stelle, 
 
 Für mehrsprachige Shops kann mit einer entsprechenden Abfrage gearbeitet werden:
 
+<?php if (defined('WIDERRUFSFORMULAR_SHOW_LINK') && WIDERRUFSFORMULAR_SHOW_LINK == 'true') {?>
 <?php if ($_SESSION['language']=='german') {?>
   <a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a>>
 <?php  } else { ?>
 	<a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2">Cancel contract</a>
+<?php } ?> 
 <?php } ?> 
 
 Die Darstellung des Buttons können Sie dann in folgender Datei auf Ihre Farben oder sonstigen Wünsche anpassen:
