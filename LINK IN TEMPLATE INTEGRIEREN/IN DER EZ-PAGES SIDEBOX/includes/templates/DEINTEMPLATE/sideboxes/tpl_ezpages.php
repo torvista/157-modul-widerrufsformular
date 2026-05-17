@@ -7,7 +7,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_ezpages.php for Widerrufsbutton 2026-05-10 11:33:58Z webchills $
+ * @version $Id: tpl_ezpages.php for Widerrufsbutton 2026-05-17 12:33:58Z webchills $
  */
   $content = "";
   $content .= '<div id="' . str_replace('_', '-', $box_id . 'Content') . '" class="sideBoxContent">';
@@ -19,7 +19,7 @@
   if ($_SESSION['language']=='german') {
   $content .= '<li><a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a></li>';
 } else { 
-	$content .= '<li><a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2">Cancel contract</a></li>';
+	$content .= '<li><a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2&language=en">Cancel contract</a></li>';
  } 
  } 
   $content  .= '</ul>' . "\n";

@@ -1,5 +1,5 @@
 Widerrufsformular 1.0.2 für Zen Cart 1.5.7k deutsch
-2026-05-10
+2026-05-17
 © 2026 webchills (www.webchills.at)
 Lizenz: GPL3
 
@@ -74,7 +74,7 @@ Der Link zu Ihrem Formular wird Ihnen angezeigt, diesen Link verlinken Sie dann 
 Er lautet standardmäßig für die deutsche Sprachversion:
 index.php?main_page=widerrufsformular&form_id=1
 Und für die englische:
-index.php?main_page=widerrufsformular&form_id=2
+index.php?main_page=widerrufsformular&form_id=2&language=en
 
 Der Link muss benannt sein als:
 Vertrag widerrufen
@@ -97,9 +97,9 @@ Für mehrsprachige Shops kann mit einer entsprechenden Abfrage gearbeitet werden
 
 <?php if (defined('WIDERRUFSFORMULAR_SHOW_LINK') && WIDERRUFSFORMULAR_SHOW_LINK == 'true') {?>
 <?php if ($_SESSION['language']=='german') {?>
-  <a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a>>
+  <a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=1">Vertrag widerrufen</a>
 <?php  } else { ?>
-	<a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2">Cancel contract</a>
+	<a class="widerrufsbutton" href="index.php?main_page=widerrufsformular&form_id=2&language=en">Cancel contract</a>
 <?php } ?> 
 <?php } ?> 
 
